@@ -8,11 +8,12 @@ puppeteer.use(StealthPlugin());
 const BASE_URL = "https://www.google.com";
 
 
-const extractLink = async (page: Page): Promise<any> => {
+const extractLink = async (page: Page, link: string): Promise<any> => {
   /**
    * This function will extract the data from the page
    * 
    * @param page: Page - The page object
+   * @param link: string - If the link is not found from the page then use this link
    * @returns Promise<any> - The extracted link
    */
 
@@ -27,6 +28,11 @@ const extractLink = async (page: Page): Promise<any> => {
     return link;
 
   });
+
+  if (!first_result_data) {
+    first_result_data = link;
+  }
+
   return first_result_data;
 }
 
@@ -41,7 +47,7 @@ const extractData = async (page: Page, link: string): Promise<any> => {
    */
 
   await page.goto(link);
-  await page.waitForNavigation();
+  // await page.waitForNavigation();
 
   let data = await page.evaluate(() => {
 
@@ -88,7 +94,7 @@ const getLocationInfo = async (query: string, latitude: number, longitude: numbe
   await page.goto(MAP_URL);
 
   // await page.waitForNavigation();
-  const link = await extractLink(page);
+  const link = await extractLink(page, MAP_URL);
 
   if (!link) {
     await browser.close();
