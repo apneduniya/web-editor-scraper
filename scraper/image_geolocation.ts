@@ -31,7 +31,7 @@ function getImageGeolocation(buffer: Buffer): Promise<any | Error> {
                 if (error) {
                     reject(error);
                 } else {
-                    console.log(exifData, "\n");
+                    // console.log(exifData, "\n");
             
                     if (exifData.gps && exifData.gps.GPSLatitude && exifData.gps.GPSLongitude) {
                         const latitude = convertDMSToDD(exifData.gps.GPSLatitude);

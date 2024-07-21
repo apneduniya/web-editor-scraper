@@ -3,8 +3,8 @@ import { getImageGeolocation } from "./image_geolocation";
 
 
 const queries = [
-    { query: "coffee", latitude: 28.6559457, longitude: 77.1404218 },
-    // { query: "restaurant", latitude: 18.6559457, longitude: 47.1404218 },
+    // { query: "coffee", latitude: 28.6559457, longitude: 77.1404218 },
+    { query: "restaurant", latitude: 18.6559457, longitude: 47.1404218 },
     // { query: "hospital", latitude: 29.655457, longitude: -97.1404218 },
     // { query: "Starbucks", latitude: 26.8484046, longitude: 75.7215344 },
     // Add more queries here
@@ -17,7 +17,7 @@ const imageURLQueries = [
     // },
     {
         query: "Dingle town in Ireland",
-        url: "https://lh3.googleusercontent.com/pw/AP1GczMhMgDybAlRW0DW-ZaZWLftC0OfiPmrXo1wEMXMjMK4XsGq81l0epbvliWQkcEMFsCGpVGHe5WXCkAuh05pWcDuJDB0_3LG6QoVZPTVG8y_D2D0s3BHD2kcceYe4gFM-PtGsHdSB-WVZdyyuAVx0_nZ=w1709-h1013-s-no-gm?authuser=0"
+        url: "https://live.staticflickr.com/65535/53865466340_a0e933d988_z.jpg"
     }
 ]
 
