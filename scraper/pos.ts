@@ -75,12 +75,12 @@ export { getNNPs };
 async function main() {
     const text = `
 
-Praxis Business School
-4.4
-291 Ratings
-Bakrahat Road Kolkata Gpo, Kolkata
-Colleges
-Institutes
+    Praxis Business School
+    4.4
+    291 Ratings
+    Bakrahat Road Kolkata Gpo, Kolkata
+    Colleges
+    Institutes
     `;
 
     const tags = await getNNPs(text);
